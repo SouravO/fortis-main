@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #002A6A;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #E8EBF1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #002A6A;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #0F52BA;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-navy text-white font-semibold tracking-widest text-xs uppercase px-8 py-4 transition-all duration-300 hover:bg-sapphire hover:shadow-lg inline-block;
+  }
+
+  .btn-outline {
+    @apply border-2 border-white text-white font-semibold tracking-widest text-xs uppercase px-8 py-4 transition-all duration-300 hover:bg-white hover:text-navy inline-block;
+  }
+
+  .btn-outline-navy {
+    @apply border-2 border-navy text-navy font-semibold tracking-widest text-xs uppercase px-8 py-4 transition-all duration-300 hover:bg-navy hover:text-white inline-block;
+  }
+
+  .section-label {
+    @apply text-sapphire font-semibold tracking-widest text-xs uppercase mb-3;
+  }
+
+  .section-title {
+    @apply text-navy font-bold text-3xl md:text-4xl leading-tight mb-6;
+  }
+
+  .section-title-white {
+    @apply text-white font-bold text-3xl md:text-4xl leading-tight mb-6;
+  }
+
+  .section-body {
+    @apply text-gray-600 font-normal text-base leading-relaxed;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-2xl hover:-translate-y-1;
+  }
+
+  .diagonal-divider {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
+
+  .diagonal-divider-reverse {
+    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

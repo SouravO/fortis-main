@@ -12,7 +12,7 @@ function FadeUp({ children, delay = 0, className = '' }) {
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, margin: '-60px' })
   return (
-    <motion.div
+    <motion.divWHERE
       ref={ref}
       initial={{ opacity: 0, y: 40 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -20,7 +20,7 @@ function FadeUp({ children, delay = 0, className = '' }) {
       className={className}
     >
       {children}
-    </motion.div>
+    </motion.divWHERE>
   )
 }
 
@@ -272,10 +272,15 @@ export default function Home() {
     <div className="overflow-x-hidden">
 
       {/* ── HERO ── */}
-      <section
-        className="relative min-h-[92vh] flex items-center overflow-hidden bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/hero.png')" }}
-      >
+      <section className="relative min-h-[92vh] flex items-center overflow-hidden">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+          src="/bg.mp4"
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-navy/70 via-navy/30 to-transparent" />
         <div className="relative z-10 w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
           <div className="max-w-3xl">

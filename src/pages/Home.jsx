@@ -189,10 +189,10 @@ function FeaturedLightbox({ images, startIndex, onClose }) {
 
 /* ─── Data ───────────────────────────────────────────────────────── */
 const stats = [
-  { value: 50, suffix: '+', label: 'Projects Delivered' },
-  { value: 5, suffix: '+', label: 'Years of Excellence' },
+  { value: 18, suffix: '+', label: 'Projects Delivered' },
+  { value: 3, suffix: '+', label: 'Years of Excellence' },
   { value: 98, suffix: '%', label: 'Client Satisfaction' },
-  { value: 12, suffix: '+', label: 'Ongoing Projects' },
+  { value: 7, suffix: '+', label: 'Ongoing Projects' },
 ]
 
 const whyChoose = [
@@ -450,11 +450,11 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((svc, i) => (
               <FadeUp key={svc.title} delay={i * 0.1}>
-                <div className="bg-white p-8 group card-hover border border-iceblue-dark/30 relative overflow-hidden">
+                <div className="bg-white p-8 group card-hover border border-iceblue-dark/30 relative overflow-hidden h-full flex flex-col">
                   <div className="absolute top-0 left-0 w-1 h-0 bg-sapphire group-hover:h-full transition-all duration-500" />
                   <div className="text-sapphire mb-5 group-hover:text-navy transition-colors duration-300">{svc.icon}</div>
                   <h3 className="text-navy font-bold text-lg mb-3 group-hover:text-sapphire transition-colors">{svc.title}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed">{svc.desc}</p>
+                  <p className="text-gray-500 text-sm leading-relaxed flex-1">{svc.desc}</p>
                 </div>
               </FadeUp>
             ))}

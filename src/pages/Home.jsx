@@ -6,6 +6,7 @@ import {
   Building2, Home as HomeIcon, Hotel, Wrench, Layers, ClipboardList,
   ChevronLeft, ChevronRight, X
 } from 'lucide-react'
+import { featuredProjects } from '../data/projects'
 
 /* ─── Animation Helpers ──────────────────────────────────────────── */
 function FadeUp({ children, delay = 0, className = '' }) {
@@ -235,33 +236,6 @@ const services = [
   { icon: <Wrench size={32} />, title: 'Interior Fit-Out', desc: 'Turnkey interior solutions — from design concept to furniture installation and final handover.' },
   { icon: <Layers size={32} />, title: 'Renovation & Refurbishment', desc: 'Breathing new life into existing spaces with precision, speed, and minimal disruption.' },
   { icon: <ClipboardList size={32} />, title: 'Project Management', desc: 'Expert consultancy and management for complex builds, ensuring scope, schedule, and budget alignment.' },
-]
-
-const featuredProjects = [
-  {
-    name: 'The Meridian Residences',
-    type: 'Residential',
-    location: 'Koramangala, Bengaluru',
-    status: 'Completed',
-    year: '2024',
-    images: ['/hero.png', '/img.jpg', '/hero.png'],
-  },
-  {
-    name: 'Vertex Commercial Park',
-    type: 'Commercial',
-    location: 'Whitefield, Bengaluru',
-    status: 'Completed',
-    year: '2023',
-    images: ['/hero.png', '/img.jpg', '/hero.png'],
-  },
-  {
-    name: 'Azure Interior Fit-Out',
-    type: 'Interior Fit-Out',
-    location: 'Indiranagar, Bengaluru',
-    status: 'Ongoing',
-    year: '2025',
-    images: ['/hero.png', '/img.jpg', '/hero.png'],
-  },
 ]
 
 /* ─── Component ─────────────────────────────────────────────────── */
